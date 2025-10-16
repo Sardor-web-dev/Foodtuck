@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodtuck</title>
+    <link rel="stylesheet" href="../styles/catalogue.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img src="../images/logo.png" alt="Logo" />
+        <div class="links">
+          <a class="link" href="/pages">Home</a>
+          <a class="link" href="#">Menu</a>
+          <a class="link" href="#">Blog</a>
+          <a class="link" href="#">Pages</a>
+          <a class="link" href="#">About</a>
+          <a class="link" href="#">Shop</a>
+          <a class="link" href="#">Contact</a>
+        </div>
+        <div class="icons">
+          <img
+            src="../images/search-icon.png"
+            alt="Search-icon"
+            width="24px"
+            height="24px"
+          />
+          <img
+            src="../images/profile-icon.svg"
+            alt="Profile-icon"
+            width="24px"
+            height="24px"
+          />
+          <img
+            src="../images/cart-icon.png"
+            alt="Cart-icon"
+            width="24px"
+            height="24px"
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="introduction">
+        <div class="main__text">
+          <h1 class="main__title">Our Shop</h1>
+          <p class="main__breadcrumb">
+            Home > <span class="orange">Shop</span>
+          </p>
+        </div>
+      </section>
+      <section class="catalogue">
+        <div class="menu">
+          <div class="sorting__block">
+            <div class="sorting__elem">
+              <p>Sort By:</p>
+              <select>
+                <option value="">Newest</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="sorting__elem">
+              <p>Show:</p>
+              <select>
+                <option value="">Newest</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="products">
+            <!-- Отрисовка Js -->
+          </div>
+        </div>
+        <div class="filters"></div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="../scripts/db.js"></script>
+    <script src="../scripts/renderCatalogue.js"></script>
+  </body>
+</html>
