@@ -1,4 +1,12 @@
+const logo = document.getElementById("logo")
 const productsBlock = document.querySelector(".products")
+
+console.log(logo);
+
+
+logo.onclick = () => {
+    window.location("/")
+}
 
 function renderProducts(arr) {
     for (let product of arr) {
@@ -29,3 +37,31 @@ function renderProducts(arr) {
 }
 
 renderProducts(products)
+
+
+const latestProducts = document.querySelector(".latest-products")
+
+const renderLatestProducts = (arr) => {
+    for (let product of arr) {
+        const div = document.createElement("div")
+        const img = document.createElement("img")
+        const textBlock = document.createElement("div")
+        const p = document.createElement("p")
+        const stars = document.createElement("img")
+        const span = document.createElement("span")
+
+        div.classList.add("product__card")
+        img.src = product.image
+        img.classList.add("product__card-image")
+        textBlock.classList.add("product__card-text")
+        p.innerText = product.name
+        stars.src = "../images/stars.svg"
+        span.innerText = product.price
+
+        textBlock.append(p, stars,span)
+        div.append(img, textBlock)
+        latestProducts.append(div)
+    }
+}
+
+renderLatestProducts(latestProductsArr)

@@ -80,16 +80,16 @@ header {
 }
 .catalogue {
   display: flex;
-  align-items: center;
   max-width: 1320px;
   margin: 0 auto;
+  gap: 50px ;
+  margin-top: 120px;
 }
 .menu {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 50px;
-  margin-top: 120px;
 }
 .sorting__block {
   display: flex;
@@ -143,4 +143,83 @@ header {
   font-weight: 400;
   color: #828282;
   text-decoration: line-through;
+}
+
+.filters {
+  display: flex;
+  flex-direction:column ;
+  gap: 25px;
+}
+
+.search{
+  display: flex;
+}
+.search__input {
+  width: 202px;
+  height: 46px;
+  background-color: #FF9F0D1A;
+  color: #828282;
+  padding: 15px;
+  border: none;
+}
+.search__button {
+  width: 46px;
+  height: 46px;
+  background-color: #FF9F0D;
+  border: none;
+}
+.search__button img {
+  width: 20px;
+  height: 20px;
+}
+.category__item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.latest-products {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.product__card {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.product__card-image{
+  width: 72px;
+  height: 67px;
+}
+.product__card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.product-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.tags p:hover {
+  color: #FF9F0D;
+  text-decoration: underline;
+  transition: ease-in-out 0.1s;
+  cursor: pointer;
+}
+.price-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
 }

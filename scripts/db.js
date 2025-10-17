@@ -67,4 +67,68 @@ const products = [
         img: "../images/product7.jpg",
         price: "$10.00",
     },
+    {
+        name: "Sandwiches",
+        img: "../images/product8.jpg",
+        price: "$25.00",
+    },
+    {
+        name: "Chicken Chup",
+        img: "../images/product9.jpg",
+        price: "$12.00",
+    },
+    {
+        name: "Country Burger",
+        img: "../images/product4.jpg",
+        price: "$45.00",
+    },
+    {
+        name: "Drink",
+        img: "../images/product5.jpg",
+        price: "$23.00",
+        discount: "$45.00"
+    },
+    {
+        name: "Pizza",
+        img: "../images/product6.jpg",
+        price: "$43.00",
+    },
+    {
+        name: "Cheese Butter",
+        img: "../images/product7.jpg",
+        price: "$10.00",
+    },
+    {
+        name: "Sandwiches",
+        img: "../images/product8.jpg",
+        price: "$25.00",
+    },
+    {
+        name: "Chicken Chup",
+        img: "../images/product9.jpg",
+        price: "$12.00",
+    },
+]
+
+const latestProductsArr = [
+    {
+        name: "Pizza",
+        image: "../images/productImg.jpg",
+        price : "$35.00"
+    },
+    {
+        name: "Cupchake",
+        image: "../images/productImg.jpg",
+        price: "$35.00"
+    },
+    {
+        name: "Cookies",
+        image: "../images/productImg.jpg",
+        price: "$35.00"
+    },
+    {
+        name: "Burger",
+        image: "../images/productImg.jpg",
+        price: "$35.00"
+    },
 ]

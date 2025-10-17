@@ -9,7 +9,9 @@
   <body>
     <header>
       <div class="header">
-        <img src="../images/logo.png" alt="Logo" />
+        <a href="/">
+          <img id="logo" src="../images/logo.png" alt="Logo" />
+        </a>
         <div class="links">
           <a class="link" href="/">Home</a>
           <a class="link" href="#">Menu</a>
@@ -74,7 +76,83 @@
             <!-- Отрисовка Js -->
           </div>
         </div>
-        <div class="filters"></div>
+        <div class="filters">
+          <div class="search">
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Search Product"
+            />
+            <button class="search__button">
+              <img src="../images/search-icon.png" alt="" />
+            </button>
+          </div>
+          <div class="categories">
+            <h2>Category</h2>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Sandwiches</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Burger</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Chicken Chup</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Drink</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Pizza</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Thi</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Non Veg</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Uncategorized</p>
+            </div>
+          </div>
+          <div class="">
+            <img src="../images/filter.svg" alt="" />
+          </div>
+          <div class="price__filter">
+            <h2>Filter by Price</h2>
+            <img src="../images/line.svg" alt="" />
+            <div class="price-text">
+              <span>From $0 to $8000</span>
+              <p>Filter</p>
+            </div>
+          </div>
+          <div class="latest-products">
+            <h2>Latest Products</h2>
+            <!-- Отрисока js -->
+          </div>
+          <div class="product-tags">
+            <h2>Product Tags</h2>
+            <div class="tags">
+              <p>Services</p>
+              <p>Our Menu</p>
+              <p>Pizza</p>
+              <p>Cupcake</p>
+              <p>Burger</p>
+              <p>Cookies</p>
+              <p>Our Shop</p>
+              <p>Tandoori</p>
+              <p>Chicken</p>
+            </div>
+          </div>
+          <div></div>
+        </div>
       </section>
     </main>
     <footer></footer>
