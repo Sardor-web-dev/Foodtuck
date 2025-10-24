@@ -1299,13 +1299,11 @@ button {
   }
 }
 
-/* Дополнительные улучшения для мобильных устройств */
 @media (max-width: 992px) {
   .header {
     position: relative;
   }
 
-  /* Добавляем бургер-меню для мобильных устройств */
   .menu-toggle {
     display: none;
   }
