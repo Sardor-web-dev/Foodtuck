@@ -13,9 +13,8 @@ html {
 }
 
 button {
-  cursor: pointer;;
+  cursor: pointer;
 }
-
 
 .header {
   display: flex;
@@ -34,6 +33,7 @@ button {
 
 .logo-wrapper {
   margin-bottom: 10px;
+  margin-top: 45px;
 }
 
 .logo {
@@ -245,13 +245,11 @@ button {
   object-fit: cover;
 }
 
-/* Первый элемент — на всю ширину */
 .images img:nth-child(1) {
   grid-column: 1 / -1;
   height: 280px;
 }
 
-/* Второй и третий — равные по размеру */
 .images img:nth-child(2),
 .images img:nth-child(3) {
   height: 194px;
@@ -320,7 +318,6 @@ button {
   border-radius: 10px;
 }
 
-/* Раскладка по сетке (в точности как на макете) */
 .collage__item:nth-child(1) {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -343,7 +340,7 @@ button {
 
 .collage__item:nth-child(5) {
   grid-column: 3 / 4;
-  grid-row: 1 / 3; /* большая вертикальная картинка */
+  grid-row: 1 / 3;
 }
 
 .collage__item:nth-child(6) {
@@ -449,19 +446,543 @@ button {
   text-align: center;
 }
 
-.achievements__item p{
+.achievements__item p {
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
-.achievements__item span{
+.achievements__item span {
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
-.achievements__item img{
+.achievements__item img {
   width: 120px;
   height: 120px;
+}
+
+.footer {
+  background-color: black;
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 35px;
+  color: white;
+  align-items: center;
+  padding-top: 50px;
+  height: 575px;
+  justify-content: center;
+}
+.subscription {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ff9f0d;
+  padding-bottom: 32px;
+}
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.support h2 {
+  font-size: 32px;
+}
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.email-input {
+  width: 296px;
+  height: 56px;
+  background-color: #ff9f0d;
+  color: #e0e0e0;
+  border: none;
+  padding: 10px;
+}
+.subscribe-form button {
+  background-color: white;
+  color: #ff9f0d;
+  width: 163px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.lists {
+  display: flex;
+  align-items: center;
+  gap: 144px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 25px;
+}
+.list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.list__title {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.list-items a {
+  text-decoration: none;
+  color: white;
+}
+.aboutUs_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 365px;
+}
+.footer__bottom {
+  background-color: #4f4f4f;
+}
+.logos {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.footer_bottom-content {
+  display: flex;
+  height: 99px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.social_logo {
+  width: 35px;
+  height: 33px;
+  cursor: pointer;
+}
+.hours {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hours__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.recentPosts {
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.recentPost {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-height: 80px;
+}
+.recentPost__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  max-width: 170px;
+}
+.recentPost__image {
+  width: 80px;
+  height: 80px;
+}
+.recentPost__title {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.recentPost__date {
+  font-size: 14px;
+  color: #828282;
+}
+.ourMenu {
+  margin-top: 100px;
+}
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+}
+.menu__text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+.menu__desc {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Great Vibes", cursive;
+  color: #ff9f0d;
+}
+.menu__title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.menu__block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.menu__tabs {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.menu__tabs a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+.menu__tabs a:hover {
+  color: #ff9f0d;
+  transition: all 0.3s;
+}
+.menu__elem {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.menu__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 15px;
+}
+.menu__item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.menu__item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: start;
+  color: white;
+}
+.menu__item-desc {
+  font-size: 14px;
+}
+.chefs {
+  margin-top: 100px;
+}
+.chefs__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+.chefs__text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.chefs__desc {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Great Vibes", cursive;
+  color: #ff9f0d;
+}
+.chefs__title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.chefs__overview {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.chef {
+  width: 312px;
+  height: 391px;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+}
+.chef__name {
+  background-color: white;
+  width: 181px;
+  height: 67px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  padding-left: 20px;
+  color: black;
+}
+.chef__firstName {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+.chefs__btn {
+  width: 155px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #ff9f0d;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+}
+.reviews {
+  margin-top: 100px;
+}
+.reviews__block {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+.reviews__text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.reviews__desc {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Great Vibes", cursive;
+  color: #ff9f0d;
+}
+.reviews__title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.reviews__swiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review {
+  background-color: white;
+  width: 868px;
+  height: 450px;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  position: relative;
+}
+.review__content {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+.review__avatar {
+  position: absolute;
+  top: -75px;
+}
+.review__image {
+  width: 47px;
+  height: 47px;
+}
+.review__data {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  max-width: 690px;
+}
+.review__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.review__author {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.review__author-info {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #828282;
+}
+.swiper__btns {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+}
+.swiper__btn {
+  width: 15px;
+  height: 16px;
+  border: none;
+  border-radius: 100%;
+}
+.active {
+  background-color: #ff9f0d;
+}
+.disactive {
+  background-color: #ff9f0d4d;
+}
+.recipes {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 558px;
+  background-image: url(../images/recipesBg.svg);
+  margin-top: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recipes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: end;
+  justify-content: center;
+  padding-top: 112px;
+}
+.recipes__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: end;
+  max-width: 705px;
+}
+.recipes__desc {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Great Vibes", cursive;
+  color: #ff9f0d;
+}
+.recipes__title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.recipes__info {
+  max-width: 651px;
+  text-align: end;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+}
+.recipes__btns {
+  display: flex;
+  align-items: end;
+  gap: 25px;
+}
+.recipes__btn1 {
+  width: 190px;
+  height: 60px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ff9f0d;
+  border-radius: 30px;
+  font-weight: 700;
+}
+.recipes__btn2 {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  gap: 10px;
+  font-weight: 700;
+}
+.blogs {
+  margin-top: 100px;
+}
+.blogs__block {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.blogs__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.blogs__desc {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Great Vibes", cursive;
+  color: #ff9f0d;
+}
+.blogs__title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.blogs__content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid white;
+  width: 424px;
+  height: 569px;
+}
+.blog__text {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+.blog__date {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ff9f0d;
+}
+.blog__name {
+  font-size: 24px;
+  font-weight: 700;
+  color: white  ;
+}
+.blog__info {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.blog__icons {
+  display: flex;
+  align-items: center;
+  gap: 6px ;
 }

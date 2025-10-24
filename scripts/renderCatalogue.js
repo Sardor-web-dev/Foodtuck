@@ -65,3 +65,32 @@ const renderLatestProducts = (arr) => {
 }
 
 renderLatestProducts(latestProductsArr)
+
+const recentPostsBlock = document.querySelector(".recentPosts")
+
+const renderRecentPosts = (arr) => {
+    for(let post of arr) {
+        const div = document.createElement("div")
+        const img = document.createElement("img")
+        const textDiv = document.createElement("div")
+        const p = document.createElement("p")
+        const span = document.createElement("span")
+
+
+        div.classList.add("recentPost")
+        img.classList.add("recentPost__image")
+        textDiv.classList.add("recentPost__text")
+        p.classList.add("recentPost__title")
+        span.classList.add("recentPost__date")
+
+        img.src = post.image;
+        p.innerText = post.title;
+        span.innerText = post.date
+
+        textDiv.append(p, span)
+        div.append(img, textDiv)
+        recentPostsBlock.append(div)
+    }
+}
+
+renderRecentPosts(recentPosts)
