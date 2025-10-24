@@ -1,11 +1,116 @@
+let filteredProducts = [...products]; 
+
+function updateProductsDisplay() {
+    productsBlock.innerHTML = '';
+
+    renderProducts(filteredProducts);
+}
+
+function filterByCategory() {
+    const checkboxes = document.querySelectorAll('.categories input[type="checkbox"]');
+    const selectedCategories = [];
+
+    checkboxes.forEach((checkbox, index) => {
+        if (checkbox.checked) {
+            const categoryText = checkbox.nextElementSibling.textContent;
+            selectedCategories.push(categoryText);
+        }
+    });
+
+    if (selectedCategories.length === 0) {
+        filteredProducts = [...products];
+    } else {
+        filteredProducts = products.filter(product => {
+            return selectedCategories.some(category =>
+                product.name.toLowerCase().includes(category.toLowerCase())
+            );
+        });
+    }
+
+    updateProductsDisplay();
+}
+
+function filterByPrice() {
+    updateProductsDisplay();
+}
+
+function searchProducts(searchTerm) {
+    if (!searchTerm.trim()) {
+        filteredProducts = [...products];
+    } else {
+        filteredProducts = products.filter(product =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }
+
+    updateProductsDisplay();
+}
+
+function sortProducts(sortType) {
+    switch (sortType) {
+        case 'newest':
+            filteredProducts = [...filteredProducts];
+            break;
+        case 'more expensive':
+            filteredProducts.sort((a, b) => {
+                const priceA = parseFloat(a.price.replace('$', ''));
+                const priceB = parseFloat(b.price.replace('$', ''));
+                return priceB - priceA;
+            });
+            break;
+        case 'cheaper':
+            filteredProducts.sort((a, b) => {
+                const priceA = parseFloat(a.price.replace('$', ''));
+                const priceB = parseFloat(b.price.replace('$', ''));
+                return priceA - priceB;
+            });
+            break;
+        default:
+            break;
+    }
+
+    updateProductsDisplay();
+}
+
+function initFilters() {
+    const categoryCheckboxes = document.querySelectorAll('.categories input[type="checkbox"]');
+    categoryCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', filterByCategory);
+    });
+
+    const searchInput = document.querySelector('.search__input');
+    const searchButton = document.querySelector('.search__button');
+
+    searchButton.addEventListener('click', () => {
+        searchProducts(searchInput.value);
+    });
+
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            searchProducts(searchInput.value);
+        }
+    });
+
+    const sortSelects = document.querySelectorAll('.sorting__select');
+    sortSelects.forEach((select, index) => {
+        select.addEventListener('change', (e) => {
+            if (index === 0) { 
+                sortProducts(e.target.value);
+            }
+        });
+    });
+
+    const priceFilter = document.querySelector('.price-text p');
+    priceFilter.addEventListener('click', filterByPrice);
+}
+
 const logo = document.getElementById("logo")
 const productsBlock = document.querySelector(".products")
 
 console.log(logo);
 
-
 logo.onclick = () => {
-    window.location("/")
+    window.location.href = "/"; 
 }
 
 function renderProducts(arr) {
@@ -16,7 +121,6 @@ function renderProducts(arr) {
         const priceDiv = document.createElement("div")
         const span = document.createElement("span")
         const discount = document.createElement("span")
-
 
         div.classList.add("product")
         img.classList.add("product__image")
@@ -37,7 +141,7 @@ function renderProducts(arr) {
 }
 
 renderProducts(products)
-
+initFilters();
 
 const latestProducts = document.querySelector(".latest-products")
 
@@ -58,7 +162,7 @@ const renderLatestProducts = (arr) => {
         stars.src = "../images/stars.svg"
         span.innerText = product.price
 
-        textBlock.append(p, stars,span)
+        textBlock.append(p, stars, span)
         div.append(img, textBlock)
         latestProducts.append(div)
     }
@@ -69,13 +173,12 @@ renderLatestProducts(latestProductsArr)
 const recentPostsBlock = document.querySelector(".recentPosts")
 
 const renderRecentPosts = (arr) => {
-    for(let post of arr) {
+    for (let post of arr) {
         const div = document.createElement("div")
         const img = document.createElement("img")
         const textDiv = document.createElement("div")
         const p = document.createElement("p")
         const span = document.createElement("span")
-
 
         div.classList.add("recentPost")
         img.classList.add("recentPost__image")

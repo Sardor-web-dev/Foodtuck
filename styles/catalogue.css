@@ -411,3 +411,18 @@ header {
   font-size: 14px;
   color: #828282;
 }
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .filters {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
