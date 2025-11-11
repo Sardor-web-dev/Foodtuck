@@ -20,33 +20,40 @@ const getProductsById = async () => {
 
     }
 }
-getProductsById()   
+getProductsById()
 
 const productBlock = document.querySelector(".productBlock")
 
 function renderProduct(product) {
-    const div = document.createElement("div")
-    const img = document.createElement("div")
-    const p = document.createElement("p")
-    const priceDiv = document.createElement("div")
-    const span = document.createElement("span")
-    const discount = document.createElement("span")
+    const div = document.createElement("div");
+    const img = document.createElement("div");
+    const info = document.createElement("div");
+    const name = document.createElement("h2");
+    const priceDiv = document.createElement("div");
+    const span = document.createElement("span");
+    const discount = document.createElement("span");
+    const desc = document.createElement("p");
 
-    div.classList.add("product")
-    img.classList.add("product__image")
-    p.classList.add("product__name")
-    priceDiv.classList.add("product-price__block")
-    span.classList.add("product__price")
-    discount.classList.add("discount")
+    div.classList.add("product");
+    img.classList.add("product__image");
+    info.classList.add("product__info");
+    name.classList.add("product__name");
+    priceDiv.classList.add("product-price__block");
+    span.classList.add("product__price");
+    discount.classList.add("discount");
+    desc.classList.add("product__description");
 
-    p.innerText = product.name
-    img.style.backgroundImage = `url(${product.img})`
-    span.innerText = product.price
-    product.discount ? discount.innerText = product.discount : discount.innerText = ''
+    img.style.backgroundImage = `url(${product.img})`;
+    name.textContent = product.name;
+    span.textContent = product.price;
+    if (product.discount) discount.textContent = product.discount;
+    desc.textContent =
+        product.description || "No description provided for this product.";
 
-    priceDiv.append(span, discount)
-    div.append(img, p, priceDiv)
-    productBlock.append(div)
+    priceDiv.append(span, discount);
+    info.append(name, priceDiv, desc);
+    div.append(img, info);
+    productBlock.append(div);
 }
 
 const changeProducts = async () => {
@@ -73,6 +80,34 @@ const changeProducts = async () => {
 updateBtn.onclick = () => {
     changeProducts()
 }
+
+const recentPostsBlock = document.querySelector(".recentPosts")
+
+const renderRecentPosts = (arr) => {
+    for (let post of arr) {
+        const div = document.createElement("div")
+        const img = document.createElement("img")
+        const textDiv = document.createElement("div")
+        const p = document.createElement("p")
+        const span = document.createElement("span")
+
+        div.classList.add("recentPost")
+        img.classList.add("recentPost__image")
+        textDiv.classList.add("recentPost__text")
+        p.classList.add("recentPost__title")
+        span.classList.add("recentPost__date")
+
+        img.src = post.image;
+        p.innerText = post.title;
+        span.innerText = post.date
+
+        textDiv.append(p, span)
+        div.append(img, textDiv)
+        recentPostsBlock.append(div)
+    }
+}
+
+renderRecentPosts(recentPosts)
 
 const data = [
     {
