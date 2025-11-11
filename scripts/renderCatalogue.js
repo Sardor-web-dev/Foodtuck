@@ -1,5 +1,3 @@
-let filteredProducts = [...products]; 
-
 function updateProductsDisplay() {
     productsBlock.innerHTML = '';
 
@@ -94,7 +92,7 @@ function initFilters() {
     const sortSelects = document.querySelectorAll('.sorting__select');
     sortSelects.forEach((select, index) => {
         select.addEventListener('change', (e) => {
-            if (index === 0) { 
+            if (index === 0) {
                 sortProducts(e.target.value);
             }
         });
@@ -110,7 +108,7 @@ const productsBlock = document.querySelector(".products")
 console.log(logo);
 
 logo.onclick = () => {
-    window.location.href = "/"; 
+    window.location.href = "/";
 }
 
 function renderProducts(arr) {
@@ -130,9 +128,13 @@ function renderProducts(arr) {
         discount.classList.add("discount")
 
         p.innerText = product.name
-        img.style.backgroundImage = `url(${product.img})`
+        img.style.backgroundImage = `url(${product.img})` 
         span.innerText = product.price
         product.discount ? discount.innerText = product.discount : discount.innerText = ''
+
+        img.onclick = () => {
+            window.location.href = `/pages/productPage.html?id=${product.id}`
+        }
 
         priceDiv.append(span, discount)
         div.append(img, p, priceDiv)
@@ -140,7 +142,21 @@ function renderProducts(arr) {
     }
 }
 
-renderProducts(products)
+const ApiUrl = "https://690b37d76ad3beba00f3f77d.mockapi.io/api/v1/products"
+let products = []
+
+const getProducts = async () => {
+    try {
+        const response = await fetch(ApiUrl);
+        products = await response.json();
+        renderProducts(products);
+    } catch (e) {
+        console.log(e, "Something went wrong");
+    }
+}
+
+getProducts()
+
 initFilters();
 
 const latestProducts = document.querySelector(".latest-products")
