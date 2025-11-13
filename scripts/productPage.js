@@ -133,7 +133,7 @@ const data = [
     },
     {
         name: "Chocolate Mulin",
-        img: ".https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvOWHpidaEZ6m0yzPRQAXpL41Nq8w59nDBdaGt",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvOWHpidaEZ6m0yzPRQAXpL41Nq8w59nDBdaGt",
         price: "$28.00",
     },
     {
@@ -160,7 +160,7 @@ const data = [
     },
     {
         name: "Cheese Butter",
-        img: ".https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3MSzuCwABHu64bLMNmP1hsUGpzaYSCOlFtnR",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3MSzuCwABHu64bLMNmP1hsUGpzaYSCOlFtnR",
         price: "$10.00",
     },
     {
