@@ -8,6 +8,7 @@ console.log(id);
 
 
 const getProductsById = async () => {
+    showLoader()
     try {
         const response = await fetch(`${ApiUrl}/${id}`)
         const product = await response.json()
@@ -18,6 +19,9 @@ const getProductsById = async () => {
     } catch (e) {
         console.log(e, "Something went wrong");
 
+    }
+    finally {
+        hideLoader()
     }
 }
 getProductsById()
@@ -106,6 +110,17 @@ const renderRecentPosts = (arr) => {
         recentPostsBlock.append(div)
     }
 }
+
+function showLoader() {
+    const loader = document.getElementById("loader");
+    if (loader) loader.classList.remove("hidden");
+}
+
+function hideLoader() {
+    const loader = document.getElementById("loader");
+    if (loader) loader.classList.add("hidden");
+}
+
 
 renderRecentPosts(recentPosts)
 

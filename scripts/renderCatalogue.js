@@ -128,7 +128,7 @@ function renderProducts(arr) {
         discount.classList.add("discount")
 
         p.innerText = product.name
-        img.style.backgroundImage = `url(${product.img})` 
+        img.style.backgroundImage = `url(${product.img})`
         span.innerText = product.price
         product.discount ? discount.innerText = product.discount : discount.innerText = ''
 
@@ -146,14 +146,31 @@ const ApiUrl = "https://690b37d76ad3beba00f3f77d.mockapi.io/api/v1/products"
 let products = []
 
 const getProducts = async () => {
+    showLoader(); 
+
     try {
         const response = await fetch(ApiUrl);
         products = await response.json();
         renderProducts(products);
+        console.log(products);
     } catch (e) {
-        console.log(e, "Something went wrong");
+        console.error("Something went wrong:", e);
+    } finally {
+        hideLoader(); 
     }
+};
+
+
+function showLoader() {
+    const loader = document.getElementById("loader");
+    if (loader) loader.classList.remove("hidden");
 }
+
+function hideLoader() {
+    const loader = document.getElementById("loader");
+    if (loader) loader.classList.add("hidden");
+}
+
 
 getProducts()
 
