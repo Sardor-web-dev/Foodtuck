@@ -127,81 +127,81 @@ renderRecentPosts(recentPosts)
 const data = [
     {
         name: "Fresh Lime",
-        img: "../images/product1.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3mAWZ5wABHu64bLMNmP1hsUGpzaYSCOlFtnR",
         price: "$38.00",
         discount: "$45.00"
     },
     {
         name: "Chocolate Mulin",
-        img: "../images/product2.jpg",
+        img: ".https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvOWHpidaEZ6m0yzPRQAXpL41Nq8w59nDBdaGt",
         price: "$28.00",
     },
     {
         name: "Burger",
-        img: "../images/product3.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvYoxePDSqhuwa5UMm0veJfx1ECsGndcLji8QK",
         price: "$21.00",
         discount: "$45.00"
     },
     {
         name: "Country Burger",
-        img: "../images/product4.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvsffaGKOlQUSIEHk2tcXgKzCVFoTMnuL0ql6R",
         price: "$45.00",
     },
     {
         name: "Drink",
-        img: "../images/product5.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvoBpqFPd7qPJ4RHwEhGLtrj8N2uaSng1cZCpX",
         price: "$23.00",
         discount: "$45.00"
     },
     {
         name: "Pizza",
-        img: "../images/product6.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv6mO9qdpZnubMRjVLD2O6kxUWTX7ycdwF8oiB",
         price: "$43.00",
     },
     {
         name: "Cheese Butter",
-        img: "../images/product7.jpg",
+        img: ".https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3MSzuCwABHu64bLMNmP1hsUGpzaYSCOlFtnR",
         price: "$10.00",
     },
     {
         name: "Sandwiches",
-        img: "../images/product8.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvh8b0Ow1YBhT0XvdDZkGLiQeRqW4UIFzCc1pP",
         price: "$25.00",
     },
     {
         name: "Chicken Chup",
-        img: "../images/product9.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv0hS7fkLLMoS2rDh4qFAmejQkfd8n5NCzwygX",
         price: "$12.00",
     },
     {
         name: "Country Burger",
-        img: "../images/product4.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvsffaGKOlQUSIEHk2tcXgKzCVFoTMnuL0ql6R",
         price: "$45.00",
     },
     {
         name: "Drink",
-        img: "../images/product5.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvoBpqFPd7qPJ4RHwEhGLtrj8N2uaSng1cZCpX",
         price: "$23.00",
         discount: "$45.00"
     },
     {
         name: "Pizza",
-        img: "../images/product6.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv6mO9qdpZnubMRjVLD2O6kxUWTX7ycdwF8oiB",
         price: "$43.00",
     },
     {
         name: "Cheese Butter",
-        img: "../images/product7.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3MSzuCwABHu64bLMNmP1hsUGpzaYSCOlFtnR",
         price: "$10.00",
     },
     {
         name: "Sandwiches",
-        img: "../images/product8.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvh8b0Ow1YBhT0XvdDZkGLiQeRqW4UIFzCc1pP",
         price: "$25.00",
     },
     {
         name: "Chicken Chup",
-        img: "../images/product9.jpg",
+        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv0hS7fkLLMoS2rDh4qFAmejQkfd8n5NCzwygX",
         price: "$12.00",
     },
 ]
