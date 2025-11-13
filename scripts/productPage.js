@@ -124,84 +124,164 @@ function hideLoader() {
 
 renderRecentPosts(recentPosts)
 
-const data = [
-    {
-        name: "Fresh Lime",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3mAWZ5wABHu64bLMNmP1hsUGpzaYSCOlFtnR",
-        price: "$38.00",
-        discount: "$45.00"
-    },
-    {
-        name: "Chocolate Mulin",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvOWHpidaEZ6m0yzPRQAXpL41Nq8w59nDBdaGt",
-        price: "$28.00",
-    },
-    {
-        name: "Burger",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvYoxePDSqhuwa5UMm0veJfx1ECsGndcLji8QK",
-        price: "$21.00",
-        discount: "$45.00"
-    },
-    {
-        name: "Country Burger",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvsffaGKOlQUSIEHk2tcXgKzCVFoTMnuL0ql6R",
-        price: "$45.00",
-    },
-    {
-        name: "Drink",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvoBpqFPd7qPJ4RHwEhGLtrj8N2uaSng1cZCpX",
-        price: "$23.00",
-        discount: "$45.00"
-    },
-    {
-        name: "Pizza",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv6mO9qdpZnubMRjVLD2O6kxUWTX7ycdwF8oiB",
-        price: "$43.00",
-    },
-    {
-        name: "Cheese Butter",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3MSzuCwABHu64bLMNmP1hsUGpzaYSCOlFtnR",
-        price: "$10.00",
-    },
-    {
-        name: "Sandwiches",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvh8b0Ow1YBhT0XvdDZkGLiQeRqW4UIFzCc1pP",
-        price: "$25.00",
-    },
-    {
-        name: "Chicken Chup",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv0hS7fkLLMoS2rDh4qFAmejQkfd8n5NCzwygX",
-        price: "$12.00",
-    },
-    {
-        name: "Country Burger",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvsffaGKOlQUSIEHk2tcXgKzCVFoTMnuL0ql6R",
-        price: "$45.00",
-    },
-    {
-        name: "Drink",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvoBpqFPd7qPJ4RHwEhGLtrj8N2uaSng1cZCpX",
-        price: "$23.00",
-        discount: "$45.00"
-    },
-    {
-        name: "Pizza",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv6mO9qdpZnubMRjVLD2O6kxUWTX7ycdwF8oiB",
-        price: "$43.00",
-    },
-    {
-        name: "Cheese Butter",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3MSzuCwABHu64bLMNmP1hsUGpzaYSCOlFtnR",
-        price: "$10.00",
-    },
-    {
-        name: "Sandwiches",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvh8b0Ow1YBhT0XvdDZkGLiQeRqW4UIFzCc1pP",
-        price: "$25.00",
-    },
-    {
-        name: "Chicken Chup",
-        img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv0hS7fkLLMoS2rDh4qFAmejQkfd8n5NCzwygX",
-        price: "$12.00",
-    },
-]
+// const data = [
+//   {
+//     id: "1",
+//     name: "Fresh Lime",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3mAWZ5wABHu64bLMNmP1hsUGpzaYSCOlFtnR",
+//     price: "$38.00",
+//     discount: "$45.00",
+//     category: "Drinks",
+//     rating: 4.7,
+//     reviews: 124,
+//     description: "Refreshing lime drink made from natural lime extract, perfect for summer.",
+//     ingredients: ["Lime", "Sugar", "Water", "Ice"],
+//     availability: "In stock",
+//     delivery: "Free delivery over $50"
+//   },
+//   {
+//     id: "2",
+//     name: "Chocolate Mulin",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvOWHpidaEZ6m0yzPRQAXpL41Nq8w59nDBdaGt",
+//     price: "$28.00",
+//     category: "Desserts",
+//     rating: 4.9,
+//     reviews: 210,
+//     description: "Soft chocolate muffin with creamy filling and rich cocoa flavor.",
+//     ingredients: ["Flour", "Cocoa", "Butter", "Sugar", "Eggs"],
+//     availability: "In stock",
+//     delivery: "1-2 days"
+//   },
+//   {
+//     id: "3",
+//     name: "Burger",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvYoxePDSqhuwa5UMm0veJfx1ECsGndcLji8QK",
+//     price: "$21.00",
+//     discount: "$45.00",
+//     category: "Fast Food",
+//     rating: 4.4,
+//     reviews: 356,
+//     description: "Classic beef burger with cheese, lettuce, tomato, and special house sauce.",
+//     ingredients: ["Beef", "Cheese", "Lettuce", "Tomato", "Bun"],
+//     availability: "Limited stock",
+//     delivery: "Pickup or delivery"
+//   },
+//   {
+//     id: "4",
+//     name: "Country Burger",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvsffaGKOlQUSIEHk2tcXgKzCVFoTMnuL0ql6R",
+//     price: "$45.00",
+//     category: "Fast Food",
+//     rating: 4.5,
+//     reviews: 178,
+//     description: "Juicy country-style burger with grilled chicken and fresh vegetables.",
+//     ingredients: ["Chicken", "Bun", "Tomato", "Lettuce", "Cheese"],
+//     availability: "In stock",
+//     delivery: "Delivery within 30 minutes"
+//   },
+//   {
+//     id: "5",
+//     name: "Drink",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvoBpqFPd7qPJ4RHwEhGLtrj8N2uaSng1cZCpX",
+//     price: "$23.00",
+//     discount: "$45.00",
+//     category: "Drinks",
+//     rating: 4.3,
+//     reviews: 97,
+//     description: "Cool and refreshing drink to energize your day.",
+//     ingredients: ["Water", "Lemon", "Sugar"],
+//     availability: "In stock",
+//     delivery: "Pickup or delivery"
+//   },
+//   {
+//     id: "6",
+//     name: "Pizza Margherita",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv6mO9qdpZnubMRjVLD2O6kxUWTX7ycdwF8oiB",
+//     price: "$43.00",
+//     category: "Pizza",
+//     rating: 4.8,
+//     reviews: 178,
+//     description: "Authentic Italian pizza with mozzarella, tomato sauce, and fresh basil leaves.",
+//     ingredients: ["Dough", "Tomato sauce", "Mozzarella", "Basil"],
+//     availability: "In stock",
+//     delivery: "30 min delivery"
+//   },
+//   {
+//     id: "7",
+//     name: "Cheese Butter",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv3MSzuCwABHu64bLMNmP1hsUGpzaYSCOlFtnR",
+//     price: "$10.00",
+//     category: "Dairy",
+//     rating: 4.1,
+//     reviews: 56,
+//     description: "Creamy butter with high-quality cheese blend.",
+//     ingredients: ["Cheese", "Butter", "Salt"],
+//     availability: "Limited stock",
+//     delivery: "Pickup only"
+//   },
+//   {
+//     id: "8",
+//     name: "Sandwiches",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvh8b0Ow1YBhT0XvdDZkGLiQeRqW4UIFzCc1pP",
+//     price: "$25.00",
+//     category: "Fast Food",
+//     rating: 4.2,
+//     reviews: 89,
+//     description: "Freshly made sandwiches with choice of fillings.",
+//     ingredients: ["Bread", "Lettuce", "Tomato", "Cheese", "Ham"],
+//     availability: "In stock",
+//     delivery: "Pickup or delivery"
+//   },
+//   {
+//     id: "9",
+//     name: "Chicken Chup",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFv0hS7fkLLMoS2rDh4qFAmejQkfd8n5NCzwygX",
+//     price: "$12.00",
+//     category: "Snacks",
+//     rating: 4.3,
+//     reviews: 97,
+//     description: "Crispy chicken bites served with spicy mayo and garlic sauce.",
+//     ingredients: ["Chicken", "Flour", "Garlic", "Spices"],
+//     availability: "In stock",
+//     delivery: "Dine-in or takeaway"
+//   },
+//   {
+//     id: "10",
+//     name: "Veggie Salad",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvVeggieImage",
+//     price: "$18.00",
+//     category: "Salads",
+//     rating: 4.6,
+//     reviews: 76,
+//     description: "Healthy fresh vegetable salad with a tangy dressing.",
+//     ingredients: ["Lettuce", "Tomato", "Cucumber", "Olives"],
+//     availability: "In stock",
+//     delivery: "Free delivery over $30"
+//   },
+//   {
+//     id: "11",
+//     name: "French Fries",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvFriesImage",
+//     price: "$9.00",
+//     category: "Snacks",
+//     rating: 4.4,
+//     reviews: 134,
+//     description: "Golden crispy French fries with a pinch of salt.",
+//     ingredients: ["Potatoes", "Salt", "Oil"],
+//     availability: "In stock",
+//     delivery: "Pickup or delivery"
+//   },
+//   {
+//     id: "12",
+//     name: "Ice Cream",
+//     img: "https://mf4ddx6arn.ufs.sh/f/uiFdSWrbqmFvIceCreamImage",
+//     price: "$7.00",
+//     category: "Desserts",
+//     rating: 4.9,
+//     reviews: 200,
+//     description: "Delicious creamy ice cream in various flavors.",
+//     ingredients: ["Milk", "Sugar", "Cream", "Flavorings"],
+//     availability: "In stock",
+//     delivery: "Pickup or delivery"
+//   }
+// ];
