@@ -5,20 +5,7 @@ renderMenuItems(menuItems)
 renderChefs(chefs)
 renderBlogs(blogs)
 
-const trigger = document.querySelector(".dropdown-trigger");
-const menu = document.querySelector(".dropdown-menu");
 const swiperBtn = document.querySelectorAll(".swiper__btn")
-
-trigger.addEventListener("click", () => {
-    const isOpen = menu.style.display === "flex";
-    menu.style.display = isOpen ? "none" : "flex";
-});
-
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".dropdown")) {
-        menu.style.display = "none";
-    }
-});
 
 swiperBtn.forEach((btn) => {
     btn.onclick = () => {
@@ -26,7 +13,7 @@ swiperBtn.forEach((btn) => {
             b.classList.add("disactive")
             b.classList.remove("active")
         });
-
+        
         btn.classList.remove("disactive")
         btn.classList.add("active")
 

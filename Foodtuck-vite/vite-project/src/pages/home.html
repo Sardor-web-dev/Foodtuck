@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,43 +22,29 @@
   <body>
     <header class="header">
       <div class="logo-wrapper">
-        <img class="logo" src="./images/logo.png" alt="logo" />
+        <img class="logo" src="/logo.png" alt="logo" />
       </div>
 
       <div class="header__navbar">
         <nav class="nav">
-          <a href="/" class="link">Home</a>
-          <a href="#menu" class="link">Menu</a>
-          <a href="#blog" class="link">Blog</a>
-          <a href="" class="link">Pages</a>
-
-          <!-- DROPDOWN ABOUT -->
-          <div class="dropdown">
-            <button class="link dropdown-trigger">
-              About <img src="./images/arrow-down.svg" alt="" />
-            </button>
-
-            <div class="dropdown-menu">
-              <a href="#our-story">Our Story</a>
-              <a href="#team">Team</a>
-              <a href="#mission">Mission</a>
-            </div>
-          </div>
-          <!-- END DROPDOWN -->
-
-          <a href="./pages/catalogue.html" class="link">Shop</a>
-          <a href="" class="link">Contact</a>
+          <a data-link="" href="/" class="link">Home</a>
+          <a data-link="" href="#menu" class="link">Menu</a>
+          <a data-link="" href="#blog" class="link">Blog</a>
+          <a data-link="" href="" class="link">Pages</a>
+          <a data-link="" href="#about" class="link">About</a>
+          <a data-link="" href="/catalogue" class="link">Shop</a>
+          <a data-link="" href="" class="link">Contact</a>
         </nav>
 
         <section class="icons">
           <input placeholder="Search..." type="text" />
           <img
-            src="./images/search-icon.png"
+            src="/search-icon.png"
             alt="search"
             width="18"
             height="18"
           />
-          <img src="./images/cart-icon.png" alt="cart" width="20" height="20" />
+          <img src="/cart-icon.png" alt="cart" width="20" height="20" />
         </section>
       </div>
     </header>
@@ -66,9 +53,9 @@
       <section class="introduction">
         <div class="links">
           <hr />
-          <img src="./images/facebook.png" alt="facebookLogo" />
-          <img src="./images/twitter.png" alt="twitterLogo" />
-          <img src="./images/pinterest.png" alt="pinterestLogo" />
+          <img src="/facebook.png" alt="facebookLogo" />
+          <img src="/twitter.png" alt="twitterLogo" />
+          <img src="/pinterest.png" alt="pinterestLogo" />
           <hr />
         </div>
         <div class="text">
@@ -85,7 +72,7 @@
           </div>
         </div>
         <div class="image">
-          <img src="./images/food.png" alt="foodImage" />
+          <img src="/food.png" alt="foodImage" />
         </div>
       </section>
       <div class="container">
@@ -126,9 +113,9 @@
             <button>Read More</button>
           </div>
           <div class="images">
-            <img src="./images/food1.jpg" alt="Наши блюда" />
-            <img src="./images/food2.jpg" alt="Наши блюда" />
-            <img src="./images/food3.jpg" alt="Наши блюда" />
+            <img src="/food1.jpg" alt="Наши блюда" />
+            <img src="/food2.jpg" alt="Наши блюда" />
+            <img src="/food3.jpg" alt="Наши блюда" />
           </div>
         </section>
       </div>
@@ -140,10 +127,10 @@
             <h2><span class="orange">Ch</span>oose Food Iteam</h2>
           </div>
           <div class="photos">
-            <img src="./images/item1.png" alt="Выберите Блюдо" />
-            <img src="./images/item2.png" alt="Выберите Блюдо" />
-            <img src="./images/item3.png" alt="Выберите Блюдо" />
-            <img src="./images/item4.png" alt="Выберите Блюдо" />
+            <img src="/item1.png" alt="Выберите Блюдо" />
+            <img src="/item2.png" alt="Выберите Блюдо" />
+            <img src="/item3.png" alt="Выберите Блюдо" />
+            <img src="/item4.png" alt="Выберите Блюдо" />
           </div>
         </section>
       </div>
@@ -153,32 +140,32 @@
           <div class="collage">
             <img
               class="collage__item"
-              src="./images/collage-item1.png"
+              src="/collage-item1.png"
               alt="collage_item"
             />
             <img
               class="collage__item"
-              src="./images/collage-item2.png"
+              src="/collage-item2.png"
               alt="collage_item"
             />
             <img
               class="collage__item"
-              src="./images/collage-item3.png"
+              src="/collage-item3.png"
               alt="collage_item"
             />
             <img
               class="collage__item"
-              src="./images/collage-item4.png"
+              src="/collage-item4.png"
               alt="collage_item"
             />
             <img
               class="collage__item"
-              src="./images/collage-item5.png"
+              src="/collage-item5.png"
               alt="collage_item"
             />
             <img
               class="collage__item"
-              src="./images/collage-item6.png"
+              src="/collage-item6.png"
               alt="collage_item"
             />
           </div>
@@ -257,7 +244,7 @@
               <div class="menu__elem">
                 <img
                   class="menu__img"
-                  src="./images/menuImg.svg"
+                  src="/menuImg.svg"
                   alt="salat image"
                 />
                 <div class="menu__items"></div>
@@ -291,13 +278,13 @@
               <div class="review">
                 <img
                   class="review__avatar"
-                  src="./images/review-avatar.svg"
+                  src="/review-avatar.svg"
                   alt=""
                 />
                 <div class="review__content">
                   <img
                     class="review__image"
-                    src="./images/baktiks.svg"
+                    src="/baktiks.svg"
                     alt=""
                   />
                   <span class="review__data"
@@ -312,7 +299,7 @@
                 <div class="review__info">
                   <img
                     class="review__stars"
-                    src="./images/reviews-stars.svg"
+                    src="/reviews-stars.svg"
                     alt=""
                   />
                   <p class="review__author">Alamin Hasan</p>
@@ -348,7 +335,7 @@
             <div class="recipes__btns">
               <button class="recipes__btn1">Read More</button>
               <button class="recipes__btn2">
-                <img src="./images/play.svg" alt="" />Play Video
+                <img src="/play.svg" alt="" />Play Video
               </button>
             </div>
           </div>
@@ -394,7 +381,7 @@
               carservice in major cities across World.</span
             >
             <div class="hours">
-              <img src="../images/hours.svg" alt="" />
+              <img src="/hours.svg" alt="" />
               <div class="hours__text">
                 <span>Opening Houres</span>
                 <span>Mon - Sat(8.00 - 6.00)</span>
@@ -440,7 +427,7 @@
               <a href="">
                 <img
                   class="social_logo"
-                  src="../images/facebook-footer.png"
+                  src="/facebook-footer.png"
                   alt="facebook logo"
                 />
               </a>
@@ -448,7 +435,7 @@
               <a href="">
                 <img
                   class="social_logo"
-                  src="../images/twitter-footer.png"
+                  src="/twitter-footer.png"
                   alt="twitter logo"
                 />
               </a>
@@ -456,7 +443,7 @@
               <a href="">
                 <img
                   class="social_logo"
-                  src="../images/instagram-footer.png"
+                  src="/instagram-footer.png"
                   alt="instagram logo"
                 />
               </a>
@@ -464,7 +451,7 @@
               <a href="">
                 <img
                   class="social_logo"
-                  src="../images/youtube-footer.png"
+                  src="/youtube-footer.png"
                   alt="youtube logo"
                 />
               </a>
@@ -472,7 +459,7 @@
               <a href="">
                 <img
                   class="social_logo"
-                  src="../images/pinterest-footer.png"
+                  src="/pinterest-footer.png"
                   alt="pinterest logo"
                 />
               </a>
@@ -481,8 +468,9 @@
         </div>
       </div>
     </footer>
-    <script src="./scripts/db.js"></script>
-    <script src="./scripts/draw.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./src/scripts/db.js"></script>
+    <script src="./src/scripts/draw.js"></script>
+    <script src="./src/scripts/script.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

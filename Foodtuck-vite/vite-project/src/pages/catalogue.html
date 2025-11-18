@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Page</title>
-    <link rel="stylesheet" href="../styles/productPage.css" />
+    <title>Foodtuck</title>
+    <link rel="stylesheet" href="../styles/catalogue.css" />
   </head>
   <body>
     <header>
@@ -43,13 +43,137 @@
         </div>
       </div>
     </header>
-
-    <main class="container">
+    <main>
       <div class="loader" id="loader">
         <div class="spinner"></div>
       </div>
 
-      <div class="productBlock"></div>
+      <section class="introduction">
+        <div class="main__text">
+          <h1 class="main__title">Our Shop</h1>
+          <p class="main__breadcrumb">
+            Home > <span class="orange">Shop</span>
+          </p>
+        </div>
+      </section>
+      <section class="catalogue">
+        <div class="menu">
+          <div class="sorting__block">
+            <div class="sorting__elem">
+              <p>Sort By:</p>
+              <select class="sorting__select">
+                <option value="">Newest</option>
+                <option value="">More expensive</option>
+                <option value="">Cheaper</option>
+              </select>
+            </div>
+            <div class="sorting__elem">
+              <p>Show:</p>
+              <select class="sorting__select">
+                <option value="">All</option>
+                <option value="">Only in stock</option>
+              </select>
+            </div>
+          </div>
+          <div class="products">
+            <!-- Отрисовка Js -->
+          </div>
+          <div class="breadcrumb">
+            <div class="breadcrumb__elem">
+              <img src="../images/arrow-left.svg" alt="" />
+            </div>
+            <div class="breadcrumb__elem">
+              <p>1</p>
+            </div>
+            <div class="breadcrumb__elem active">
+              <p>2</p>
+            </div>
+            <div class="breadcrumb__elem">
+              <p>3</p>
+            </div>
+            <div class="breadcrumb__elem">
+              <img src="../images/arrow-right.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="filters">
+          <div class="search">
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Search Product"
+            />
+            <button class="search__button">
+              <img src="../images/search-icon.png" alt="" />
+            </button>
+          </div>
+          <div class="categories">
+            <h2>Category</h2>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Sandwiches</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Burger</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Chicken Chup</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Drink</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Pizza</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Thi</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Non Veg</p>
+            </div>
+            <div class="category__item">
+              <input type="checkbox" />
+              <p>Uncategorized</p>
+            </div>
+          </div>
+          <div class="">
+            <img src="../images/filter.svg" alt="" />
+          </div>
+          <div class="price__filter">
+            <h2>Filter by Price</h2>
+            <img src="../images/line.svg" alt="" />
+            <div class="price-text">
+              <span>From $0 to $8000</span>
+              <p>Filter</p>
+            </div>
+          </div>
+          <div class="latest-products">
+            <h2>Latest Products</h2>
+            <!-- Отрисока js -->
+          </div>
+          <div class="product-tags">
+            <h2>Product Tags</h2>
+            <div class="tags">
+              <p>Services</p>
+              <p>Our Menu</p>
+              <p>Pizza</p>
+              <p>Cupcake</p>
+              <p>Burger</p>
+              <p>Cookies</p>
+              <p>Our Shop</p>
+              <p>Tandoori</p>
+              <p>Chicken</p>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -168,6 +292,6 @@
     </footer>
 
     <script src="../scripts/db.js"></script>
-    <script src="../scripts/productPage.js"></script>
+    <script src="../scripts/renderCatalogue.js"></script>
   </body>
 </html>

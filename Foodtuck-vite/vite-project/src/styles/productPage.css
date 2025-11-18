@@ -13,46 +13,40 @@ body {
   min-height: 100vh;
 }
 
-  header {
-    width: 100%;
-    background-color: black;
-    height: 90px;
-    display: flex;
-    align-items: center;
-  }
-
-  .header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1320px;
-    margin: 0 auto;
-  }
-
-  .links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .link {
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .link:hover {
-    color: orange;
-  }
+.header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
+}
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.header .title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.update {
+  background-color: #ff7b00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  float: right;
+}
+
+.update:hover {
+  background-color: #ff9900;
+}
+
 .productBlock {
   display: flex;
   justify-content: center;
