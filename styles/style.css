@@ -1405,3 +1405,41 @@ button {
     transform: translateY(0) scale(1);
   }
 }
+.reviews__swiper {
+  position: relative;
+  width: 868px;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+.active-slide {
+  left: 0;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-next {
+  transform: translateX(100%);
+}
+
+.slide-prev {
+  transform: translateX(-100%);
+}
+
+.moving-in {
+  opacity: 1;
+}
+
+.moving-out {
+  opacity: 0;
+}

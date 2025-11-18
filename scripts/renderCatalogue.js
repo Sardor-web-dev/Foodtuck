@@ -4,6 +4,14 @@ function updateProductsDisplay() {
     renderProducts(filteredProducts);
 }
 
+function debounce(func, delay) {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), delay);
+    };
+}
+
 function filterByCategory() {
     const checkboxes = document.querySelectorAll('.categories input[type="checkbox"]');
     const selectedCategories = [];
@@ -83,11 +91,12 @@ function initFilters() {
         searchProducts(searchInput.value);
     });
 
-    searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            searchProducts(searchInput.value);
-        }
-    });
+    const debouncedSearch = debounce(() => {
+        searchProducts(searchInput.value);
+    }, 400);
+
+    searchInput.addEventListener("input", debouncedSearch);
+
 
     const sortSelects = document.querySelectorAll('.sorting__select');
     sortSelects.forEach((select, index) => {
@@ -146,7 +155,7 @@ const ApiUrl = "https://690b37d76ad3beba00f3f77d.mockapi.io/api/v1/products"
 let products = []
 
 const getProducts = async () => {
-    showLoader(); 
+    showLoader();
 
     try {
         const response = await fetch(ApiUrl);
@@ -156,7 +165,7 @@ const getProducts = async () => {
     } catch (e) {
         console.error("Something went wrong:", e);
     } finally {
-        hideLoader(); 
+        hideLoader();
     }
 };
 
